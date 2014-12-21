@@ -1,0 +1,26 @@
+@media screen and (max-width:768px){
+	footer.mainFooter{
+		.copyright{float:none;}
+		}
+	}
+@media screen and (max-width:600px){
+	div[class$="Fifth"]{
+		float: none;
+		max-width: 100%;
+		&:first-child{padding-bottom: 20px;}
+		&:last-child{padding: 0;}
+		}
+	}
+
+@media screen and (max-width:515px){
+	footer.mainFooter{
+		.copyright, .footerNav, .footerNav a{
+			display: block;
+			padding: 0;
+			padding-bottom: 10px;
+			}
+		.footerNav a:last-child{
+			padding: 0;
+			}
+		}
+	}

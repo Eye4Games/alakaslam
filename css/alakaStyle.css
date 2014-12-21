@@ -225,7 +225,7 @@ footer.mainFooter {
     z-index: 2; }
   footer.mainFooter .copyright {
     color: #efeecb;
-    font: 200 normal 2em/1 "Oswald", Helvetica, Arial, sans-serif;
+    font: 200 normal 2em/1 "Oswald",Helvetica, Arial, sans-serif;
     padding: 30px 0 0 20px;
     text-transform: uppercase; }
   footer.mainFooter .footerNav {
@@ -239,3 +239,22 @@ footer.mainFooter {
       text-shadow: 0 1px 2px #103229; }
       footer.mainFooter .footerNav a:hover {
         color: #efeecb; }
+
+@media screen and (max-width: 768px) {
+  footer.mainFooter .copyright {
+    float: none; } }
+@media screen and (max-width: 600px) {
+  div[class$="Fifth"] {
+    float: none;
+    max-width: 100%; }
+    div[class$="Fifth"]:first-child {
+      padding-bottom: 20px; }
+    div[class$="Fifth"]:last-child {
+      padding: 0; } }
+@media screen and (max-width: 515px) {
+  footer.mainFooter .copyright, footer.mainFooter .footerNav, footer.mainFooter .footerNav a {
+    display: block;
+    padding: 0;
+    padding-bottom: 10px; }
+  footer.mainFooter .footerNav a:last-child {
+    padding: 0; } }
