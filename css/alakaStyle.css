@@ -1,0 +1,241 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, * + * {
+  box-sizing: border-box; }
+
+body {
+  background: url("../images/green-bg.jpg") repeat;
+  font-size: 62.5%;
+  font-family: "Vollkorn", Georgia, Times, serif; }
+
+img, svg {
+  max-width: 100%;
+  height: auto; }
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px; }
+
+.explanation .container::after, .teamProfiles .teamProfile::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+p {
+  font: 400 normal 1.6em/1.8em "Vollkorn", Georgia, Times, serif;
+  padding-bottom: 20px; }
+  p:last-child {
+    padding-bottom: 0; }
+  p b {
+    font-weight: 600; }
+  p i {
+    font-style: italic; }
+
+h1 {
+  color: #009345;
+  font-size: 2.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 20px; }
+
+.twoFifth {
+  max-width: 42.75%; }
+
+.threeFifth {
+  max-width: 57.25%; }
+
+div[class$="Fifth"] {
+  float: left; }
+  div[class$="Fifth"]:last-child {
+    padding-left: 30px; }
+
+.mainHeader {
+  background: url("../images/sigil.svg") 10px center no-repeat, rgba(0, 147, 69, 0.3);
+  text-align: center;
+  padding: 15px 20px 10px;
+  position: relative; }
+  .mainHeader::after {
+    background: linear-gradient(to bottom, rgba(16, 50, 41, 0.3), rgba(0, 147, 69, 0.3));
+    content: "";
+    position: absolute;
+    height: 30px;
+    left: 0;
+    right: 0;
+    top: 100%; }
+
+.mainNav {
+  background: #efeecb;
+  margin: 0 auto;
+  max-width: 840px;
+  padding: 10px 20px;
+  position: relative;
+  top: 15px;
+  z-index: 2; }
+  .mainNav::before, .mainNav::after {
+    border: 10px solid white;
+    box-sizing: content-box;
+    content: "";
+    position: absolute;
+    top: 100%;
+    z-index: 1; }
+  .mainNav::before {
+    left: 0;
+    border-color: #d1ce69 #d1ce69 transparent transparent; }
+  .mainNav::after {
+    right: 0;
+    border-color: #d1ce69 transparent transparent #d1ce69; }
+  .mainNav a {
+    color: #103229;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .mainNav a.navHere, .mainNav a:hover {
+      color: #009345; }
+
+section, .teamProfiles, .mainFooter {
+  overflow: hidden; }
+
+.introduction {
+  background: linear-gradient(to bottom, rgba(16, 50, 41, 0.7), rgba(16, 50, 41, 0.5));
+  color: white;
+  margin-top: -9px;
+  padding: 40px 0 20px;
+  text-shadow: 0 1px 3px #103229; }
+
+.explanation {
+  background: url("../images/tennis-wizard.png") -200px 30px no-repeat, linear-gradient(to bottom, rgba(239, 238, 203, 0.9), rgba(239, 238, 203, 0.7));
+  border-top: 5px solid #f1f1d3;
+  padding: 30px 0 0; }
+  .explanation h2 {
+    text-shadow: 0 1px 3px #9c9c75; }
+  .explanation p {
+    color: #103229; }
+  .explanation .button {
+    background: linear-gradient(to bottom, #009345, #007939);
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px #efeecb;
+    border: none;
+    color: #efeecb;
+    font: 400 italic 1.6em/1 "Vollkorn", Georgia, Times, serif;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    text-shadow: 0 1px 3px #103229;
+    text-decoration: none; }
+    .explanation .button:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #007939, #00602d); }
+    .explanation .button:active {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #00602d, #004621); }
+  .explanation .container {
+    padding-bottom: 30px; }
+
+.teamProfiles {
+  background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
+  padding: 30px 20px; }
+  .teamProfiles h1 {
+    color: #5e5e47;
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center; }
+  .teamProfiles .teamProfile {
+    margin: 0 auto;
+    max-width: 650px;
+    padding-bottom: 20px; }
+    .teamProfiles .teamProfile img {
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px 5px rgba(156, 156, 117, 0.3);
+      float: left;
+      margin-right: -180px; }
+    .teamProfiles .teamProfile .teamProfileText {
+      padding-left: 180px;
+      padding-top: 5%; }
+    .teamProfiles .teamProfile h3 {
+      color: #009345;
+      font: 600 italic 1.6em/1 "Vollkorn", Georgia, Times, serif; }
+    .teamProfiles .teamProfile h2 {
+      color: #5e5e47;
+      font: 700 normal 2em/1 "Vollkorn", Georgia, Times, serif;
+      text-transform: uppercase; }
+
+.quotation {
+  background: linear-gradient(to bottom, rgba(0, 147, 69, 0.5), rgba(0, 147, 69, 0.3));
+  border-top: 5px solid #00ac51;
+  padding: 30px 0;
+  text-align: center; }
+  .quotation blockquote {
+    margin: 0 auto;
+    max-width: 530px;
+    padding-bottom: 30px; }
+    .quotation blockquote cite {
+      color: #efeecb;
+      font: 600 normal 1.6em/1 "Vollkorn", Georgia, Times, serif;
+      text-transform: uppercase; }
+    .quotation blockquote p {
+      color: white;
+      font-style: italic; }
+    .quotation blockquote:last-child {
+      padding-bottom: 0; }
+
+footer.mainFooter {
+  background: url("../images/sigil.svg") 10px center no-repeat, linear-gradient(to bottom, rgba(16, 50, 41, 0.8), rgba(16, 50, 41, 0.6));
+  border-top: 5px solid rgba(16, 50, 41, 0.8);
+  padding: 30px 20px 20px;
+  text-align: right; }
+  footer.mainFooter .Eye4Logo, footer.mainFooter .copyright {
+    float: left; }
+  footer.mainFooter .Eye4Logo {
+    margin-top: -35px;
+    position: relative;
+    z-index: 2; }
+  footer.mainFooter .copyright {
+    color: #efeecb;
+    font: 200 normal 2em/1 "Oswald", Helvetica, Arial, sans-serif;
+    padding: 30px 0 0 20px;
+    text-transform: uppercase; }
+  footer.mainFooter .footerNav {
+    padding-top: 30px; }
+    footer.mainFooter .footerNav a {
+      color: #009345;
+      font: 700 italic 2em/1 "Vollkorn", Georgia, Times, serif;
+      margin-left: 30px;
+      padding: 30px 0 20px;
+      text-decoration: none;
+      text-shadow: 0 1px 2px #103229; }
+      footer.mainFooter .footerNav a:hover {
+        color: #efeecb; }
