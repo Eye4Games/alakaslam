@@ -3,6 +3,7 @@
 //PALETTE
 $mainGreen:#009345;
 $darkGreen:#103229;
+$linkGreen:#8bc53f;
 $lightBrown:#efeecb;
 $midBrown:#9c9c75;
 $darkBrown:#5e5e47;
@@ -29,17 +30,22 @@ img, svg{
 	}
 %clearfix {
     &::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-}
+	    content: "";
+	    display: block;
+	    clear: both;
+		}
+	}
 p{
 	font: 400 normal 1.6em/1.8em $serifStack;
 	padding-bottom: 20px;
 	&:last-child{padding-bottom: 0;}
 	b{font-weight: 600;}
 	i{font-style: italic;}
+	a{
+		color: $linkGreen;
+		text-decoration: none;
+		&:hover{border-bottom: 1px solid $linkGreen;}
+		}
 	}
 h1{
 	color: $mainGreen;
@@ -60,7 +66,8 @@ div[class$="Fifth"]{
 	float: left;
 	&:last-child{padding-left: 30px;}
 	}
-	
+
+//*********************************************HEADER
 .mainHeader{
 	background: url("../images/sigil.svg") 10px center no-repeat, rgba($mainGreen,.3);
 	text-align: center;
@@ -75,6 +82,8 @@ div[class$="Fifth"]{
 		top: 100%;
 		}
 	}
+
+//*******************************************NAVIGATION
 .mainNav{
 	background: $lightBrown;
 	margin: 0 auto;
@@ -110,7 +119,7 @@ div[class$="Fifth"]{
 		}
 	}
 	
-//*********************************SECTIONS
+//********************************************************************SECTIONS
 
 section, .teamProfiles, .mainFooter{
 	overflow: hidden;
@@ -122,6 +131,13 @@ section, .teamProfiles, .mainFooter{
 	padding: 40px 0 20px;
 	text-shadow: 0 1px 3px $darkGreen;
 	}
+.interior{
+	.introduction{
+		h1{font: 400 normal 5em/1 $serifStack; }
+		}
+	}
+	
+//EXPLANATION	
 .explanation{
 	background: url("../images/tennis-wizard.png") -200px 30px no-repeat,linear-gradient(to bottom, rgba($lightBrown,.9), rgba($lightBrown,.7));
 	border-top: 5px solid lighten($lightBrown,2%);
@@ -153,6 +169,33 @@ section, .teamProfiles, .mainFooter{
 		padding-bottom: 30px;
 		}
 	}
+
+.interior#faq .explanation{
+	h2{
+		color: $mainGreen;
+		font-size: 2.4em;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+		}
+	.container{
+		margin: 0 auto;
+		max-width: 530px;
+		}
+	.character{
+		background: linear-gradient(to bottom, rgba($midBrown,.2), rgba($midBrown,.1));
+		padding-top: 30px;
+		h1{
+			color: $darkBrown;
+			font-size: 2em;
+			font-weight: 400;
+			letter-spacing: 2px;
+			text-align: center;
+			}
+		}
+	}
+	
+//TEAM PROFILES	
 .teamProfiles{
 	background: linear-gradient(to bottom, rgba($midBrown,.2), rgba($midBrown,.1));
 	padding: 30px 20px;
@@ -189,12 +232,20 @@ section, .teamProfiles, .mainFooter{
 		@extend %clearfix;
 		}
 	}
+	
+//QUOTATIONS
 .quotation{
 	background: linear-gradient(to bottom, rgba($mainGreen,.5), rgba($mainGreen,.3));
 	border-top: 5px solid lighten($mainGreen,5%);
 	box-shadow: 0 5px 5px $darkGreen;
 	padding: 30px 0;
 	text-align: center;
+	h2{
+		color: $lightBrown;
+		font: 700 normal 1.6em/1 $serifStack;
+		text-transform: uppercase;
+		}
+	p{color: $darkGreen;}
 	blockquote{
 		margin: 0 auto;
 		max-width: 530px;
@@ -211,6 +262,9 @@ section, .teamProfiles, .mainFooter{
 		&:last-child{padding-bottom: 0;}
 		}
 	}
+
+	
+//***********************************************************FOOTER
 footer.mainFooter{
 	background:url("../images/reverse-sigil.svg") right center no-repeat, linear-gradient(to bottom, rgba($darkGreen,.8), rgba($darkGreen,.6));
 	padding: 30px 20px 20px;
