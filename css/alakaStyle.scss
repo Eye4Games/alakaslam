@@ -142,7 +142,7 @@ section, .teamProfiles, .mainFooter{
 	background: url("../images/tennis-wizard.png") -200px 30px no-repeat,linear-gradient(to bottom, rgba($lightBrown,.9), rgba($lightBrown,.7));
 	border-top: 5px solid lighten($lightBrown,2%);
 	padding: 30px 0 0;
-	h2{text-shadow: 0 1px 3px $midBrown;}
+	h2{text-shadow: 0 2px 3px rgba($midBrown,.5);}
 	p{color: $darkGreen;}
 	.button{
 		background: linear-gradient(to bottom, $mainGreen, darken($mainGreen,5%));
@@ -170,19 +170,16 @@ section, .teamProfiles, .mainFooter{
 		}
 	}
 
-.interior#faq .explanation{
+.interior .explanation{
 	h2{
 		color: $mainGreen;
 		font-size: 2.4em;
 		font-weight: 700;
 		text-transform: uppercase;
+		text-shadow: 0 1px 1px rgba($lightBrown,.8);
 		padding-bottom: 20px;
 		}
-	.container{
-		margin: 0 auto;
-		max-width: 530px;
-		}
-	.character{
+	.character, .doublesSection{
 		background: linear-gradient(to bottom, rgba($midBrown,.2), rgba($midBrown,.1));
 		padding-top: 30px;
 		h1{
@@ -192,6 +189,64 @@ section, .teamProfiles, .mainFooter{
 			letter-spacing: 2px;
 			text-align: center;
 			}
+		}
+	p a{
+		color: $mainGreen;
+		&:hover{border-bottom-color: $mainGreen;}
+		}
+	ol{list-style-type: decimal;}
+	ul{list-style-type: circle;}
+	ul, ol{
+		font: 400 normal 1.6em/1.8em $serifStack;
+		padding-left: 20px;
+		padding-bottom: 30px;
+		i{font-style: italic;}
+		}
+	ol ul {
+		font-size: 1em;
+		padding-bottom: 0;
+		}
+	}
+	
+#faq .explanation{
+	.container{max-width: 530px;}
+	}
+#rules{
+	.twoFifth{
+		h2{color: $midBrown;}
+		ul, p{color: $darkBrown;}
+		}
+	}
+aside.example{
+	background: linear-gradient(to bottom, rgba($lightBrown,.6), rgba($lightBrown,.4));
+	border: 5px  ridge rgba($midBrown,.2);
+	border-radius: 2px;
+	box-shadow: 0 2px 3px rgba($darkBrown,.5);
+	padding: 15px;
+	position: relative;
+	margin-bottom: 30px;
+	h3{
+		color: $midBrown;
+		font-size: 1.6em;
+		font-weight: 400;
+		letter-spacing: 2px;
+		padding-bottom: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		}
+	p{color: $darkBrown;}
+	&::after{
+		box-shadow: 0 2px 3px rgba($darkBrown,.5);
+		content: "i";
+		color: $lightBrown;
+		font: 400 italic 1.8em $serifStack;
+		height: 25px;
+		width: 25px;
+		background: $mainGreen;
+		border-radius: 50%;
+		position: absolute;
+		top:-10px; right: -10px;
+		text-align: center;
 		}
 	}
 	
