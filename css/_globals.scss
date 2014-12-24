@@ -1,0 +1,71 @@
+//PALETTE
+$mainGreen:#009345;
+$darkGreen:#103229;
+$linkGreen:#8bc53f;
+$lightBrown:#efeecb;
+$midBrown:#9c9c75;
+$darkBrown:#5e5e47;
+
+$serifStack:"Vollkorn", Georgia, Times, serif;
+
+*, *+*{
+	box-sizing: border-box;
+	}
+	
+body{
+	background: url("../images/green-bg.jpg") repeat;
+	font-size: 62.5%;
+	font-family: $serifStack;
+	}
+img, svg{
+	max-width: 100%;
+	height: auto;
+	}
+.container{
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 0 20px;
+	}
+%clearfix {
+    &::after {
+	    content: "";
+	    display: block;
+	    clear: both;
+		}
+	}
+a:hover{
+	transition: color 100ms ease-in-out;
+	}
+p{
+	font: 400 normal 1.6em/1.8em $serifStack;
+	padding-bottom: 20px;
+	&:last-child{padding-bottom: 0;}
+	b{font-weight: 600;}
+	i{font-style: italic;}
+	a{
+		color: $linkGreen;
+		text-decoration: none;
+		&:hover{border-bottom: 1px solid $linkGreen;}
+		}
+	}
+h1{
+	color: $mainGreen;
+	font-size: 2.4em;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	}
+	
+//SIZING
+.twoFifth{
+	max-width: 42.75%;
+	width: 42.75%;
+	}
+.threeFifth{
+	max-width: 57.25%;
+	width: 57.25%;
+	}
+div[class$="Fifth"]{
+	float: left;
+	&:last-child{padding-left: 30px;}
+	}
