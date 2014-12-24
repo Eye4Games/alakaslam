@@ -317,7 +317,7 @@ footer.mainFooter {
     margin-top: -35px; }
   footer.mainFooter .copyright {
     color: #efeecb;
-    font: 200 normal 2em/1 "Oswald", Helvetica, Arial, sans-serif;
+    font: 200 normal 2em/1 "Oswald",Helvetica, Arial, sans-serif;
     padding: 30px 0 0 20px;
     text-transform: uppercase; }
   footer.mainFooter .footerNav {
@@ -334,14 +334,10 @@ footer.mainFooter {
 
 @media screen and (max-width: 850px) {
   .introduction .container {
-    padding: 0 40px; }
- }
-
+    padding: 0 40px; } }
 @media screen and (max-width: 768px) {
   footer.mainFooter .copyright {
-    float: none; }
- }
-
+    float: none; } }
 @media screen and (max-width: 600px) {
   div[class$="Fifth"] {
     float: none;
@@ -353,9 +349,7 @@ footer.mainFooter {
       padding: 0; }
 
   .buyButton {
-    text-align: center; }
- }
-
+    text-align: center; } }
 @media screen and (max-width: 515px) {
   .mainNav {
     text-align: center; }
@@ -373,9 +367,7 @@ footer.mainFooter {
     padding: 0; }
 
   .interior .introduction h1 {
-    font-size: 8.5vw; }
- }
-
+    font-size: 8.5vw; } }
 @media screen and (max-width: 475px) {
   .teamProfiles .teamProfile {
     text-align: center; }
@@ -384,5 +376,4 @@ footer.mainFooter {
     .teamProfiles .teamProfile img {
       margin-right: 0; }
     .teamProfiles .teamProfile .teamProfileText {
-      padding-left: 0; }
- }
+      padding-left: 0; } }
