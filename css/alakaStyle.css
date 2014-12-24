@@ -53,6 +53,9 @@ img, svg {
   display: block;
   clear: both; }
 
+a:hover {
+  transition: color 100ms ease-in-out; }
+
 p {
   font: 400 normal 1.6em/1.8em "Vollkorn", Georgia, Times, serif;
   padding-bottom: 20px; }
@@ -62,6 +65,11 @@ p {
     font-weight: 600; }
   p i {
     font-style: italic; }
+  p a {
+    color: #8bc53f;
+    text-decoration: none; }
+    p a:hover {
+      border-bottom: 1px solid #8bc53f; }
 
 h1 {
   color: #009345;
@@ -71,10 +79,12 @@ h1 {
   padding-bottom: 20px; }
 
 .twoFifth {
-  max-width: 42.75%; }
+  max-width: 42.75%;
+  width: 42.75%; }
 
 .threeFifth {
-  max-width: 57.25%; }
+  max-width: 57.25%;
+  width: 57.25%; }
 
 div[class$="Fifth"] {
   float: left; }
@@ -99,7 +109,7 @@ div[class$="Fifth"] {
   background: #efeecb;
   margin: 0 auto;
   max-width: 840px;
-  padding: 10px 20px;
+  padding: 12px 20px 8px;
   position: relative;
   top: 15px;
   z-index: 2; }
@@ -136,12 +146,16 @@ section, .teamProfiles, .mainFooter {
   padding: 40px 0 20px;
   text-shadow: 0 1px 3px #103229; }
 
+.interior .introduction h1 {
+  font: 400 normal 5em/1 "Vollkorn", Georgia, Times, serif;
+  padding-bottom: 10px; }
+
 .explanation {
   background: url("../images/tennis-wizard.png") -200px 30px no-repeat, linear-gradient(to bottom, rgba(239, 238, 203, 0.9), rgba(239, 238, 203, 0.7));
   border-top: 5px solid #f1f1d3;
   padding: 30px 0 0; }
   .explanation h2 {
-    text-shadow: 0 1px 3px #9c9c75; }
+    text-shadow: 0 2px 3px rgba(156, 156, 117, 0.5); }
   .explanation p {
     color: #103229; }
   .explanation .button {
@@ -150,7 +164,7 @@ section, .teamProfiles, .mainFooter {
     box-shadow: 0px 2px 3px #efeecb;
     border: none;
     color: #efeecb;
-    font: 400 italic 1.6em/1 "Vollkorn", Georgia, Times, serif;
+    font-style: italic;
     letter-spacing: 1px;
     padding: 5px 15px;
     text-shadow: 0 1px 3px #103229;
@@ -163,6 +177,80 @@ section, .teamProfiles, .mainFooter {
       background: linear-gradient(to bottom, #00602d, #004621); }
   .explanation .container {
     padding-bottom: 30px; }
+
+.interior .explanation h2 {
+  color: #009345;
+  font-size: 2.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(239, 238, 203, 0.8);
+  padding-bottom: 20px; }
+.interior .explanation .character, .interior .explanation .doublesSection {
+  background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
+  padding-top: 30px; }
+  .interior .explanation .character h1, .interior .explanation .doublesSection h1 {
+    color: #5e5e47;
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center; }
+.interior .explanation p a {
+  color: #009345; }
+  .interior .explanation p a:hover {
+    border-bottom-color: #009345; }
+.interior .explanation ol {
+  list-style-type: decimal; }
+.interior .explanation ul {
+  list-style-type: circle; }
+.interior .explanation ul, .interior .explanation ol {
+  font: 400 normal 1.6em/1.8em "Vollkorn", Georgia, Times, serif;
+  padding-left: 20px;
+  padding-bottom: 30px; }
+  .interior .explanation ul i, .interior .explanation ol i {
+    font-style: italic; }
+.interior .explanation ol ul {
+  font-size: 1em;
+  padding-bottom: 0; }
+
+#faq .explanation .container {
+  max-width: 530px; }
+
+#rules .twoFifth h2 {
+  color: #9c9c75; }
+#rules .twoFifth ul, #rules .twoFifth p {
+  color: #5e5e47; }
+
+aside.example {
+  background: linear-gradient(to bottom, rgba(239, 238, 203, 0.6), rgba(239, 238, 203, 0.4));
+  border: 5px ridge rgba(156, 156, 117, 0.2);
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(94, 94, 71, 0.5);
+  padding: 15px;
+  position: relative;
+  margin-bottom: 30px; }
+  aside.example h3 {
+    color: #9c9c75;
+    font-size: 1.6em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase; }
+  aside.example p {
+    color: #5e5e47; }
+  aside.example::after {
+    box-shadow: 0 2px 3px rgba(94, 94, 71, 0.5);
+    content: "i";
+    color: #efeecb;
+    font: 400 italic 1.8em "Vollkorn", Georgia, Times, serif;
+    height: 25px;
+    width: 25px;
+    background: #009345;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    text-align: center; }
 
 .teamProfiles {
   background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
@@ -196,8 +284,15 @@ section, .teamProfiles, .mainFooter {
 .quotation {
   background: linear-gradient(to bottom, rgba(0, 147, 69, 0.5), rgba(0, 147, 69, 0.3));
   border-top: 5px solid #00ac51;
+  box-shadow: 0 5px 5px #103229;
   padding: 30px 0;
   text-align: center; }
+  .quotation h2 {
+    color: #efeecb;
+    font: 700 normal 1.6em/1 "Vollkorn", Georgia, Times, serif;
+    text-transform: uppercase; }
+  .quotation p {
+    color: #103229; }
   .quotation blockquote {
     margin: 0 auto;
     max-width: 530px;
@@ -214,15 +309,12 @@ section, .teamProfiles, .mainFooter {
 
 footer.mainFooter {
   background: url("../images/reverse-sigil.svg") right center no-repeat, linear-gradient(to bottom, rgba(16, 50, 41, 0.8), rgba(16, 50, 41, 0.6));
-  border-top: 5px solid rgba(16, 50, 41, 0.8);
   padding: 30px 20px 20px;
   text-align: right; }
   footer.mainFooter .Eye4Logo, footer.mainFooter .copyright {
     float: left; }
   footer.mainFooter .Eye4Logo {
-    margin-top: -35px;
-    position: relative;
-    z-index: 2; }
+    margin-top: -35px; }
   footer.mainFooter .copyright {
     color: #efeecb;
     font: 200 normal 2em/1 "Oswald",Helvetica, Arial, sans-serif;
@@ -240,21 +332,48 @@ footer.mainFooter {
       footer.mainFooter .footerNav a:hover {
         color: #efeecb; }
 
+@media screen and (max-width: 850px) {
+  .introduction .container {
+    padding: 0 40px; } }
 @media screen and (max-width: 768px) {
   footer.mainFooter .copyright {
     float: none; } }
 @media screen and (max-width: 600px) {
   div[class$="Fifth"] {
     float: none;
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
     div[class$="Fifth"]:first-child {
       padding-bottom: 20px; }
     div[class$="Fifth"]:last-child {
-      padding: 0; } }
+      padding: 0; }
+
+  .buyButton {
+    text-align: center; } }
 @media screen and (max-width: 515px) {
+  .mainNav {
+    text-align: center; }
+    .mainNav a {
+      font-size: 5vw; }
+
+  .explanation .button {
+    display: block; }
+
   footer.mainFooter .copyright, footer.mainFooter .footerNav, footer.mainFooter .footerNav a {
     display: block;
     padding: 0;
     padding-bottom: 10px; }
   footer.mainFooter .footerNav a:last-child {
-    padding: 0; } }
+    padding: 0; }
+
+  .interior .introduction h1 {
+    font-size: 8.5vw; } }
+@media screen and (max-width: 475px) {
+  .teamProfiles .teamProfile {
+    text-align: center; }
+    .teamProfiles .teamProfile img, .teamProfiles .teamProfile .teamProfileText {
+      float: none; }
+    .teamProfiles .teamProfile img {
+      margin-right: 0; }
+    .teamProfiles .teamProfile .teamProfileText {
+      padding-left: 0; } }
