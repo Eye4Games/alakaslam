@@ -3,7 +3,7 @@
 
 //*********************************************HEADER
 .mainHeader{
-	background: url("../images/sigil.svg") 10px center no-repeat, rgba($mainGreen,.3);
+	background: url("../images/sigil.png") 10px center no-repeat, rgba($mainGreen,.3);
 	text-align: center;
 	padding: 15px 20px 10px;
 	position: relative;
@@ -258,7 +258,7 @@ aside.example{
 	
 //***********************************************************FOOTER
 footer.mainFooter{
-	background:url("../images/reverse-sigil.svg") right center no-repeat, linear-gradient(to bottom, rgba($darkGreen,.8), rgba($darkGreen,.6));
+	background:url("../images/reverse-sigil.png") right center no-repeat, linear-gradient(to bottom, rgba($darkGreen,.8), rgba($darkGreen,.6));
 	padding: 30px 20px 20px;
 	text-align: right;
 	.Eye4Logo, .copyright{float: left;}
