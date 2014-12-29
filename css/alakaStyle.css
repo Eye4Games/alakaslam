@@ -252,60 +252,65 @@ aside.example {
     right: -10px;
     text-align: center; }
 
-.teamProfiles {
-  background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
-  padding: 30px 20px; }
-  .teamProfiles h1 {
-    color: #5e5e47;
-    font-size: 2em;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-align: center; }
-  .teamProfiles .teamProfile {
-    margin: 0 auto;
-    max-width: 650px;
-    padding-bottom: 20px; }
-    .teamProfiles .teamProfile img {
-      border-radius: 50%;
-      box-shadow: 0px 0px 5px 5px rgba(156, 156, 117, 0.3);
-      float: left;
-      margin-right: -180px; }
-    .teamProfiles .teamProfile .teamProfileText {
-      padding-left: 180px;
-      padding-top: 5%; }
-    .teamProfiles .teamProfile h3 {
-      color: #009345;
-      font: 600 italic 1.6em/1 "Vollkorn", Georgia, Times, serif; }
-    .teamProfiles .teamProfile h2 {
-      color: #5e5e47;
-      font: 700 normal 2em/1 "Vollkorn", Georgia, Times, serif;
-      text-transform: uppercase; }
-
 .quotation {
-  background: linear-gradient(to bottom, rgba(0, 147, 69, 0.5), rgba(0, 147, 69, 0.3));
-  border-top: 5px solid #00ac51;
-  box-shadow: 0 5px 5px #103229;
-  padding: 30px 0;
+  background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
+  padding: 30px 20px;
   text-align: center; }
-  .quotation h2 {
-    color: #efeecb;
-    font: 700 normal 1.6em/1 "Vollkorn", Georgia, Times, serif;
-    text-transform: uppercase; }
-  .quotation p {
-    color: #103229; }
   .quotation blockquote {
     margin: 0 auto;
     max-width: 530px;
     padding-bottom: 30px; }
     .quotation blockquote cite {
-      color: #efeecb;
+      color: #009345;
       font: 600 normal 1.6em/1 "Vollkorn", Georgia, Times, serif;
       text-transform: uppercase; }
     .quotation blockquote p {
-      color: white;
+      color: #5e5e47;
       font-style: italic; }
     .quotation blockquote:last-child {
       padding-bottom: 0; }
+
+.beforeFooter {
+  background: linear-gradient(to bottom, rgba(0, 147, 69, 0.5), rgba(0, 147, 69, 0.3));
+  border-top: 5px solid #00ac51;
+  box-shadow: 0 5px 5px #103229;
+  padding: 30px 20px; }
+  .beforeFooter h2 {
+    color: #103229;
+    font: 700 normal 1.6em/1 "Vollkorn", Georgia, Times, serif;
+    text-transform: uppercase; }
+  .beforeFooter p {
+    color: white; }
+
+.interior .beforeFooter {
+  text-align: center; }
+
+.teamProfiles h1 {
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center; }
+.teamProfiles .teamProfile {
+  margin: 0 auto;
+  max-width: 650px;
+  padding-bottom: 20px; }
+  .teamProfiles .teamProfile img {
+    background: linear-gradient(to bottom, rgba(16, 50, 41, 0.2), rgba(16, 50, 41, 0));
+    padding: 8px;
+    border-radius: 50%;
+    float: left;
+    margin-right: -180px; }
+  .teamProfiles .teamProfile .teamProfileText {
+    padding-left: 180px;
+    padding-top: 5%; }
+  .teamProfiles .teamProfile h3 {
+    color: #004621;
+    font: 600 italic 1.6em/1 "Vollkorn", Georgia, Times, serif; }
+  .teamProfiles .teamProfile h2 {
+    color: #103229;
+    font: 700 normal 2em/1 "Vollkorn", Georgia, Times, serif;
+    text-transform: uppercase; }
 
 footer.mainFooter {
   background: url("../images/reverse-sigil.png") right center no-repeat, linear-gradient(to bottom, rgba(16, 50, 41, 0.8), rgba(16, 50, 41, 0.6));
@@ -352,7 +357,8 @@ footer.mainFooter {
     div[class$="Fifth"]:last-child {
       padding: 0; }
 
-  .buyButton {
+  .explanation .button {
+    display: block;
     text-align: center; }
  }
 
@@ -361,9 +367,6 @@ footer.mainFooter {
     text-align: center; }
     .mainNav a {
       font-size: 5vw; }
-
-  .explanation .button {
-    display: block; }
 
   footer.mainFooter .copyright, footer.mainFooter .footerNav, footer.mainFooter .footerNav a {
     display: block;

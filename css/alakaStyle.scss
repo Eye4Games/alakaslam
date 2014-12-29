@@ -187,12 +187,48 @@ aside.example{
 		}
 	}
 	
-//TEAM PROFILES	
-.teamProfiles{
+//QUOTATIONS
+.quotation{
 	background: linear-gradient(to bottom, rgba($midBrown,.2), rgba($midBrown,.1));
 	padding: 30px 20px;
+	text-align: center;
+	blockquote{
+		margin: 0 auto;
+		max-width: 530px;
+		padding-bottom: 30px;
+		cite{
+			color: $mainGreen;
+			font: 600 normal 1.6em/1 $serifStack;
+			text-transform: uppercase;
+			}
+		p{
+			color: $darkBrown;
+			font-style: italic;
+			}
+		&:last-child{padding-bottom: 0;}
+		}	
+	}
+
+.beforeFooter{
+	background: linear-gradient(to bottom, rgba($mainGreen,.5), rgba($mainGreen,.3));
+	border-top: 5px solid lighten($mainGreen,5%);
+	box-shadow: 0 5px 5px $darkGreen;
+	padding: 30px 20px;
+	h2{
+		color: $darkGreen;
+		font: 700 normal 1.6em/1 $serifStack;
+		text-transform: uppercase;
+		}
+	p{color: white;}
+	}
+.interior .beforeFooter{
+	text-align: center;
+	}
+	
+//TEAM PROFILES	
+.teamProfiles{
 	h1{
-		color: $darkBrown;
+		color: white;
 		font-size: 2em;
 		font-weight: 400;
 		letter-spacing: 2px;
@@ -203,8 +239,9 @@ aside.example{
 		max-width: 650px;
 		padding-bottom: 20px;
 		img{
+			background: linear-gradient(to bottom, rgba($darkGreen,.2), rgba($darkGreen,0));
+			padding: 8px;
 			border-radius: 50%;
-			box-shadow: 0px 0px 5px 5px rgba($midBrown,.3);
 			float: left;
 			margin-right: -180px;
 			}
@@ -213,45 +250,15 @@ aside.example{
 			padding-top: 5%;
 			}
 		h3{
-			color: $mainGreen;
+			color: darken($mainGreen,15%);
 			font: 600 italic 1.6em/1 $serifStack;
 			}
 		h2{
-			color: $darkBrown;
+			color: $darkGreen;
 			font: 700 normal 2em/1 $serifStack;
 			text-transform: uppercase;
 			}
 		@extend %clearfix;
-		}
-	}
-	
-//QUOTATIONS
-.quotation{
-	background: linear-gradient(to bottom, rgba($mainGreen,.5), rgba($mainGreen,.3));
-	border-top: 5px solid lighten($mainGreen,5%);
-	box-shadow: 0 5px 5px $darkGreen;
-	padding: 30px 0;
-	text-align: center;
-	h2{
-		color: $lightBrown;
-		font: 700 normal 1.6em/1 $serifStack;
-		text-transform: uppercase;
-		}
-	p{color: $darkGreen;}
-	blockquote{
-		margin: 0 auto;
-		max-width: 530px;
-		padding-bottom: 30px;
-		cite{
-			color: $lightBrown;
-			font: 600 normal 1.6em/1 $serifStack;
-			text-transform: uppercase;
-			}
-		p{
-			color: white;
-			font-style: italic;
-			}
-		&:last-child{padding-bottom: 0;}
 		}
 	}
 
