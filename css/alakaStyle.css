@@ -44,6 +44,10 @@ img, svg {
   height: auto; }
 
 .container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: nowrap;
+  flex-flow: nowrap;
   margin: 0 auto;
   max-width: 800px;
   padding: 0 20px; }
@@ -79,17 +83,17 @@ h1 {
   padding-bottom: 20px; }
 
 .twoFifth {
-  max-width: 42.75%;
-  width: 42.75%; }
+  -webkit-box-flex: 2 42.75%;
+  -webkit-flex: 2 42.75%;
+  flex: 2 42.75%; }
 
 .threeFifth {
-  max-width: 57.25%;
-  width: 57.25%; }
+  -webkit-box-flex: 3 57.25%;
+  -webkit-flex: 3 57.25%;
+  flex: 3 57.25%; }
 
-div[class$="Fifth"] {
-  float: left; }
-  div[class$="Fifth"]:last-child {
-    padding-left: 30px; }
+div[class$="Fifth"]:last-child {
+  padding-left: 30px; }
 
 .mainHeader {
   background: url("../images/sigil.png") 10px center no-repeat, rgba(0, 147, 69, 0.3);
@@ -146,6 +150,8 @@ section, .teamProfiles, .mainFooter {
   padding: 40px 0 20px;
   text-shadow: 0 1px 3px #103229; }
 
+.interior .introduction .container {
+  display: block; }
 .interior .introduction h1 {
   font: 400 normal 5em/1 "Vollkorn", Georgia, Times, serif;
   padding-bottom: 10px; }
@@ -213,7 +219,8 @@ section, .teamProfiles, .mainFooter {
   padding-bottom: 0; }
 
 #faq .explanation .container {
-  max-width: 530px; }
+  max-width: 530px;
+  display: block; }
 
 #rules .twoFifth h2 {
   color: #9c9c75; }
@@ -292,18 +299,26 @@ aside.example {
   letter-spacing: 2px;
   text-align: center; }
 .teamProfiles .teamProfile {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-flow: nowrap;
+  flex-flow: nowrap;
   margin: 0 auto;
   max-width: 650px;
   padding-bottom: 20px; }
   .teamProfiles .teamProfile img {
     background: linear-gradient(to bottom, rgba(16, 50, 41, 0.2), rgba(16, 50, 41, 0));
     padding: 8px;
-    border-radius: 50%;
-    float: left;
-    margin-right: -180px; }
+    border-radius: 50%; }
   .teamProfiles .teamProfile .teamProfileText {
-    padding-left: 180px;
-    padding-top: 5%; }
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-align-self: center;
+    align-self: center;
+    padding-left: 20px; }
   .teamProfiles .teamProfile h3 {
     color: #004621;
     font: 600 italic 1.6em/1 "Vollkorn", Georgia, Times, serif; }
@@ -312,29 +327,46 @@ aside.example {
     font: 700 normal 2em/1 "Vollkorn", Georgia, Times, serif;
     text-transform: uppercase; }
 
-footer.mainFooter {
+.mainFooter {
   background: url("../images/reverse-sigil.png") right center no-repeat, linear-gradient(to bottom, rgba(16, 50, 41, 0.8), rgba(16, 50, 41, 0.6));
   padding: 30px 20px 20px;
   text-align: right; }
-  footer.mainFooter .Eye4Logo, footer.mainFooter .copyright {
-    float: left; }
-  footer.mainFooter .Eye4Logo {
+  .mainFooter .container {
+    overflow: visible; }
+  .mainFooter .Eye4Logo {
     margin-top: -35px; }
-  footer.mainFooter .copyright {
+  .mainFooter .textContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: nowrap;
+    flex-flow: nowrap;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: 100%;
+    padding-left: 20px; }
+  .mainFooter .copyright {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
     color: #efeecb;
     font: 200 normal 2em/1 "Oswald", Helvetica, Arial, sans-serif;
-    padding: 30px 0 0 20px;
+    padding: 30px 0 0;
+    text-align: left;
     text-transform: uppercase; }
-  footer.mainFooter .footerNav {
+  .mainFooter .footerNav {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
     padding-top: 30px; }
-    footer.mainFooter .footerNav a {
+    .mainFooter .footerNav a {
       color: #009345;
       font: 700 italic 2em/1 "Vollkorn", Georgia, Times, serif;
       margin-left: 30px;
       padding: 30px 0 20px;
       text-decoration: none;
       text-shadow: 0 1px 2px #103229; }
-      footer.mainFooter .footerNav a:hover {
+      .mainFooter .footerNav a:hover {
         color: #efeecb; }
 
 @media screen and (max-width: 850px) {
@@ -343,15 +375,28 @@ footer.mainFooter {
  }
 
 @media screen and (max-width: 768px) {
-  footer.mainFooter .copyright {
-    float: none; }
+  .mainFooter .textContainer {
+    -webkit-flex-flow: wrap;
+    flex-flow: wrap; }
+  .mainFooter .copyright, .mainFooter .footerNav {
+    -webkit-box-flex: 1 100%;
+    -webkit-flex: 1 100%;
+    flex: 1 100%; }
+  .mainFooter .copyright {
+    text-align: right; }
+  .mainFooter .footerNav {
+    padding-top: 10px; }
  }
 
 @media screen and (max-width: 600px) {
+  .container {
+    -webkit-flex-flow: wrap;
+    flex-flow: wrap; }
+
   div[class$="Fifth"] {
-    float: none;
-    max-width: 100%;
-    width: 100%; }
+    -webkit-box-flex: 1 100%;
+    -webkit-flex: 1 100%;
+    flex: 1 100%; }
     div[class$="Fifth"]:first-child {
       padding-bottom: 20px; }
     div[class$="Fifth"]:last-child {
@@ -362,7 +407,7 @@ footer.mainFooter {
     text-align: center; }
  }
 
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 550px) {
   .mainNav {
     text-align: center; }
     .mainNav a {
@@ -381,11 +426,15 @@ footer.mainFooter {
 
 @media screen and (max-width: 475px) {
   .teamProfiles .teamProfile {
+    -webkit-flex-flow: wrap;
+    flex-flow: wrap;
     text-align: center; }
-    .teamProfiles .teamProfile img, .teamProfiles .teamProfile .teamProfileText {
-      float: none; }
+    .teamProfiles .teamProfile .teamProfileText {
+      -webkit-box-flex: 1 100%;
+      -webkit-flex: 1 100%;
+      flex: 1 100%; }
     .teamProfiles .teamProfile img {
-      margin-right: 0; }
+      margin: 0 auto; }
     .teamProfiles .teamProfile .teamProfileText {
       padding-left: 0; }
  }
