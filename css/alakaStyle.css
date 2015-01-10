@@ -92,8 +92,10 @@ h1 {
   -webkit-flex: 3 57.25%;
   flex: 3 57.25%; }
 
-div[class$="Fifth"]:last-child {
-  padding-left: 30px; }
+div[class$="Fifth"] {
+  overflow: hidden; }
+  div[class$="Fifth"]:last-child {
+    padding-left: 30px; }
 
 .mainHeader {
   background: url("../images/sigil.png") 10px center no-repeat, rgba(0, 147, 69, 0.3);

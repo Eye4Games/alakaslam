@@ -71,6 +71,6 @@ h1{
 	}
 div[class$="Fifth"]{
 	//float: left;
-	
+	overflow: hidden;
 	&:last-child{padding-left: 30px;}
 	}
