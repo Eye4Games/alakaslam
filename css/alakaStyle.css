@@ -85,17 +85,16 @@ h1 {
 .twoFifth {
   -webkit-box-flex: 2 42.75%;
   -webkit-flex: 2 42.75%;
-  flex: 2 42.75%; }
+  flex: 2 42.75%;
+  overflow: hidden; }
 
 .threeFifth {
   -webkit-box-flex: 3 57.25%;
   -webkit-flex: 3 57.25%;
   flex: 3 57.25%; }
 
-div[class$="Fifth"] {
-  overflow: hidden; }
-  div[class$="Fifth"]:last-child {
-    padding-left: 30px; }
+div[class$="Fifth"]:last-child {
+  padding-left: 30px; }
 
 .mainHeader {
   background: url("../images/sigil.png") 10px center no-repeat, rgba(0, 147, 69, 0.3);

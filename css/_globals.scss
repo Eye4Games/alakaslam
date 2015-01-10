@@ -63,6 +63,7 @@ h1{
 	//max-width: 42.75%;
 	//width: 42.75%;
 	-webkit-box-flex: 2 42.75%; -webkit-flex: 2 42.75%; flex: 2 42.75%;
+	overflow: hidden;
 	}
 .threeFifth{
 	//max-width: 57.25%;
@@ -71,6 +72,5 @@ h1{
 	}
 div[class$="Fifth"]{
 	//float: left;
-	overflow: hidden;
 	&:last-child{padding-left: 30px;}
 	}
