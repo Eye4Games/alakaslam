@@ -8,6 +8,28 @@ $darkBrown:#5e5e47;
 
 $serifStack:"Vollkorn", Georgia, Times, serif;
 
+//MIXINS
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flexWrap($opt){
+	-webkit-flex-wrap: $opt;
+	flex-wrap: $opt;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-webkit-flex:  $values;
+	-ms-flex:  $values;
+	flex:  $values;
+}
+
+
+
 *, *+*{
 	box-sizing: border-box;
 	}
@@ -22,8 +44,8 @@ img, svg{
 	height: auto;
 	}
 .container{
-	display: -webkit-flex; display: flex;
-	-webkit-flex-flow: nowrap; flex-flow: nowrap;
+	@include flexbox();
+	@include flexWrap(nowrap);
 	margin: 0 auto;
 	max-width: 800px;
 	padding: 0 20px;
@@ -60,15 +82,13 @@ h1{
 	
 //SIZING
 .twoFifth{
-	//max-width: 42.75%;
 	//width: 42.75%;
-	-webkit-box-flex: 2 42.75%; -webkit-flex: 2 42.75%; flex: 2 42.75%;
+	@include flex(2 42.75%);
 	overflow: hidden;
 	}
 .threeFifth{
-	//max-width: 57.25%;
 	//width: 57.25%;
-	-webkit-box-flex: 3 57.25%; -webkit-flex: 3 57.25%; flex: 3 57.25%;
+	@include flex(3 57.25%);
 	}
 div[class$="Fifth"]{
 	//float: left;

@@ -82,29 +82,30 @@ section, .teamProfiles, .mainFooter{
 	padding: 30px 0 0;
 	h2{text-shadow: 0 2px 3px rgba($midBrown,.5);}
 	p{color: $darkGreen;}
-	.button{
-		background: linear-gradient(to bottom, $mainGreen, darken($mainGreen,5%));
-		border-radius: 5px;
-		box-shadow: 0px 2px 3px $lightBrown;
-		border:none;
-		color: $lightBrown;
-		font-style: italic;
-		letter-spacing: 1px;
-		padding: 5px 15px;
-		text-shadow: 0 1px 3px $darkGreen;
-		text-decoration: none;
-		&:hover{
-			cursor: pointer;
-			background: linear-gradient(to bottom, darken($mainGreen,5%), darken($mainGreen,10%));
-			}
-		&:active{
-			cursor: pointer;
-			background: linear-gradient(to bottom, darken($mainGreen,10%), darken($mainGreen,15%));
-			}
-		}
 	.container{
 		@extend %clearfix;
 		padding-bottom: 30px;
+		}
+	}
+
+.button{
+	background: linear-gradient(to bottom, $mainGreen, darken($mainGreen,5%));
+	border-radius: 5px;
+	box-shadow: 0px 2px 3px $lightBrown;
+	border:none;
+	color: $lightBrown;
+	font-style: italic;
+	letter-spacing: 1px;
+	padding: 5px 15px;
+	text-shadow: 0 1px 3px $darkGreen;
+	text-decoration: none;
+	&:hover{
+		cursor: pointer;
+		background: linear-gradient(to bottom, darken($mainGreen,5%), darken($mainGreen,10%));
+		}
+	&:active{
+		cursor: pointer;
+		background: linear-gradient(to bottom, darken($mainGreen,10%), darken($mainGreen,15%));
 		}
 	}
 
@@ -236,9 +237,9 @@ aside.example{
 		text-align: center;
 		}
 	.teamProfile{
-		display: -webkit-flex; display: flex;
+		@include flexbox();
+		@include flexWrap(nowrap);
 		-webkit-align-items: flex-start; align-items: flex-start;
-		-webkit-flex-flow: nowrap; flex-flow: nowrap;
 		margin: 0 auto;
 		max-width: 650px;
 		padding-bottom: 20px;
@@ -248,10 +249,9 @@ aside.example{
 			border-radius: 50%;
 			}
 		.teamProfileText{
-			-webkit-box-flex: 1; -webkit-flex: 1; flex: 1;
+			@include flex(1);
 			-webkit-align-self: center; align-self: center;
 			padding-left: 20px;
-			//padding-top: 5%;
 			}
 		h3{
 			color: darken($mainGreen,15%);
@@ -276,14 +276,14 @@ aside.example{
 		margin-top: -35px;
 		}
 	.textContainer{
-		display: -webkit-flex; display: flex;
-		-webkit-flex-flow: nowrap; flex-flow: nowrap;
-		-webkit-box-flex: 1; -webkit-flex: 1; flex: 1;
+		@include flexbox();
+		@include flexWrap(nowrap);
+		@include flex(1);
 		width: 100%;
 		padding-left: 20px;
 		}
 	.copyright{
-		-webkit-box-flex: 1; -webkit-flex: 1; flex: 1;
+		@include flex(1);
 		color: $lightBrown;
 		font: 200 normal 2em/1 "Oswald",Helvetica, Arial, sans-serif;
 		padding: 30px 0 0;

@@ -44,10 +44,12 @@ img, svg {
   height: auto; }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: nowrap;
-  flex-flow: nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 auto;
   max-width: 800px;
   padding: 0 20px; }
@@ -85,12 +87,14 @@ h1 {
 .twoFifth {
   -webkit-box-flex: 2 42.75%;
   -webkit-flex: 2 42.75%;
+  -ms-flex: 2 42.75%;
   flex: 2 42.75%;
   overflow: hidden; }
 
 .threeFifth {
   -webkit-box-flex: 3 57.25%;
   -webkit-flex: 3 57.25%;
+  -ms-flex: 3 57.25%;
   flex: 3 57.25%; }
 
 div[class$="Fifth"]:last-child {
@@ -165,25 +169,26 @@ section, .teamProfiles, .mainFooter {
     text-shadow: 0 2px 3px rgba(156, 156, 117, 0.5); }
   .explanation p {
     color: #103229; }
-  .explanation .button {
-    background: linear-gradient(to bottom, #009345, #007939);
-    border-radius: 5px;
-    box-shadow: 0px 2px 3px #efeecb;
-    border: none;
-    color: #efeecb;
-    font-style: italic;
-    letter-spacing: 1px;
-    padding: 5px 15px;
-    text-shadow: 0 1px 3px #103229;
-    text-decoration: none; }
-    .explanation .button:hover {
-      cursor: pointer;
-      background: linear-gradient(to bottom, #007939, #00602d); }
-    .explanation .button:active {
-      cursor: pointer;
-      background: linear-gradient(to bottom, #00602d, #004621); }
   .explanation .container {
     padding-bottom: 30px; }
+
+.button {
+  background: linear-gradient(to bottom, #009345, #007939);
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px #efeecb;
+  border: none;
+  color: #efeecb;
+  font-style: italic;
+  letter-spacing: 1px;
+  padding: 5px 15px;
+  text-shadow: 0 1px 3px #103229;
+  text-decoration: none; }
+  .button:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #007939, #00602d); }
+  .button:active {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #00602d, #004621); }
 
 .interior .explanation h2 {
   color: #009345;
@@ -300,12 +305,14 @@ aside.example {
   letter-spacing: 2px;
   text-align: center; }
 .teamProfiles .teamProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: flex-start;
   align-items: flex-start;
-  -webkit-flex-flow: nowrap;
-  flex-flow: nowrap;
   margin: 0 auto;
   max-width: 650px;
   padding-bottom: 20px; }
@@ -316,6 +323,7 @@ aside.example {
   .teamProfiles .teamProfile .teamProfileText {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     -webkit-align-self: center;
     align-self: center;
@@ -337,18 +345,22 @@ aside.example {
   .mainFooter .Eye4Logo {
     margin-top: -35px; }
   .mainFooter .textContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: nowrap;
-    flex-flow: nowrap;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     width: 100%;
     padding-left: 20px; }
   .mainFooter .copyright {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     color: #efeecb;
     font: 200 normal 2em/1 "Oswald",Helvetica, Arial, sans-serif;
@@ -375,11 +387,12 @@ aside.example {
     padding: 0 40px; } }
 @media screen and (max-width: 768px) {
   .mainFooter .textContainer {
-    -webkit-flex-flow: wrap;
-    flex-flow: wrap; }
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .mainFooter .copyright, .mainFooter .footerNav {
     -webkit-box-flex: 1 100%;
     -webkit-flex: 1 100%;
+    -ms-flex: 1 100%;
     flex: 1 100%; }
   .mainFooter .copyright {
     text-align: right; }
@@ -387,12 +400,13 @@ aside.example {
     padding-top: 10px; } }
 @media screen and (max-width: 600px) {
   .container {
-    -webkit-flex-flow: wrap;
-    flex-flow: wrap; }
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
 
   div[class$="Fifth"] {
     -webkit-box-flex: 1 100%;
     -webkit-flex: 1 100%;
+    -ms-flex: 1 100%;
     flex: 1 100%; }
     div[class$="Fifth"]:first-child {
       padding-bottom: 20px; }
@@ -419,12 +433,13 @@ aside.example {
     font-size: 8.5vw; } }
 @media screen and (max-width: 475px) {
   .teamProfiles .teamProfile {
-    -webkit-flex-flow: wrap;
-    flex-flow: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
     text-align: center; }
     .teamProfiles .teamProfile .teamProfileText {
       -webkit-box-flex: 1 100%;
       -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
       flex: 1 100%; }
     .teamProfiles .teamProfile img {
       margin: 0 auto; }

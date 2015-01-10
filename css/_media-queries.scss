@@ -4,22 +4,20 @@
 @media screen and (max-width:768px){
 	.mainFooter{
 		.textContainer{
-			-webkit-flex-flow: wrap; flex-flow: wrap;
+			@include flexWrap(wrap);
 			}
 		.copyright, .footerNav{
-			-webkit-box-flex: 1 100%; -webkit-flex: 1 100%; flex: 1 100%;
+			@include flex(1 100%);
 			}
 		.copyright{text-align: right;}
 		.footerNav{padding-top: 10px;}
 		}
 	}
 @media screen and (max-width:600px){
-	.container{-webkit-flex-flow: wrap; flex-flow: wrap;}
+	.container{@include flexWrap(wrap);}
 	div[class$="Fifth"]{
-		//float: none;
-		//max-width: 100%;
 		//width: 100%;
-		-webkit-box-flex: 1 100%; -webkit-flex: 1 100%; flex: 1 100%;
+		@include flex(1 100%);
 		&:first-child{padding-bottom: 20px;}
 		&:last-child{padding: 0;}
 		}
@@ -51,9 +49,9 @@
 
 @media screen and (max-width:475px){
 	.teamProfiles .teamProfile{
-		-webkit-flex-flow: wrap; flex-flow: wrap;
+		@include flexWrap(wrap);
 		text-align: center;
-		.teamProfileText{-webkit-box-flex: 1 100%; -webkit-flex: 1 100%; flex: 1 100%;}
+		.teamProfileText{@include flex(1 100%);}
 		img{margin: 0 auto;}
 		.teamProfileText{padding-left: 0;}
 		}	
