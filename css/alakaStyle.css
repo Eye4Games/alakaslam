@@ -115,13 +115,26 @@ div[class$="Fifth"]:last-child {
     top: 100%; }
 
 .mainNav {
+  -webkit-align-items: center;
+  align-items: center;
   background: #efeecb;
   margin: 0 auto;
   max-width: 840px;
-  padding: 12px 20px 8px;
+  padding: 8px 20px;
   position: relative;
+  text-align: right;
   top: 15px;
   z-index: 2; }
+  .mainNav .intenalNav {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left; }
+    .mainNav .intenalNav a {
+      margin-right: 20px; }
+      .mainNav .intenalNav a.navHere, .mainNav .intenalNav a:hover {
+        color: #009345; }
   .mainNav::before, .mainNav::after {
     border: 10px solid white;
     box-sizing: content-box;
@@ -139,11 +152,11 @@ div[class$="Fifth"]:last-child {
     color: #103229;
     font-size: 1.8em;
     font-weight: 700;
-    margin-right: 20px;
+    line-height: 1;
     text-decoration: none;
     text-transform: uppercase; }
-    .mainNav a.navHere, .mainNav a:hover {
-      color: #009345; }
+  .mainNav .buyButton {
+    color: #efeecb; }
 
 section, .teamProfiles, .mainFooter {
   overflow: hidden; }
@@ -180,7 +193,7 @@ section, .teamProfiles, .mainFooter {
   color: #efeecb;
   font-style: italic;
   letter-spacing: 1px;
-  padding: 5px 15px;
+  padding: 5px 15px 3px;
   text-shadow: 0 1px 3px #103229;
   text-decoration: none; }
   .button:hover {

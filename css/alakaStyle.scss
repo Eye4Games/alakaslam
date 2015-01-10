@@ -19,13 +19,23 @@
 
 //*******************************************NAVIGATION
 .mainNav{
+	-webkit-align-items: center; align-items: center;
 	background: $lightBrown;
 	margin: 0 auto;
 	max-width: 840px;
-	padding: 12px 20px 8px;
+	padding: 8px 20px;
 	position: relative;
+	text-align: right;
 	top:15px;
 	z-index: 2;
+	.intenalNav{
+		@include flex(1);
+		text-align: left;
+		a{
+			margin-right: 20px;
+			&.navHere, &:hover{color: $mainGreen;}
+			}
+		}
 	&::before, &::after{
 		border: 10px solid white;
 		box-sizing: content-box;
@@ -46,10 +56,12 @@
 		color: $darkGreen;
 		font-size: 1.8em;
 		font-weight: 700;
-		margin-right: 20px;
+		line-height: 1;
 		text-decoration: none;
 		text-transform: uppercase;
-		&.navHere, &:hover{color: $mainGreen;}
+		}
+	.buyButton{
+		color: $lightBrown;
 		}
 	}
 	
@@ -96,7 +108,7 @@ section, .teamProfiles, .mainFooter{
 	color: $lightBrown;
 	font-style: italic;
 	letter-spacing: 1px;
-	padding: 5px 15px;
+	padding: 5px 15px 3px;
 	text-shadow: 0 1px 3px $darkGreen;
 	text-decoration: none;
 	&:hover{
