@@ -390,8 +390,7 @@ aside.example {
 .gmgSeal svg {
   fill: white; }
 .gmgSeal:hover svg {
-  -webkit-filter: drop-shadow(0 3px 1px rgba(16, 50, 41, 0.5));
-  filter: drop-shadow(0 3px 1px rgba(16, 50, 41, 0.5)); }
+  fill: #8bc53f; }
 
 .mainFooter {
   background: url("../images/reverse-sigil.png") right center no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(16, 50, 41, 0.8)), to(rgba(16, 50, 41, 0.6)));
