@@ -28,8 +28,23 @@ $serifStack:"Vollkorn", Georgia, Times, serif;
 	flex:  $values;
 }
 
+//MEDIA QUERIES
+@mixin breakpoint($point) {
+  @if $point == first {
+    @media (max-width: 850px) { @content; }
+  }
+  @else if $point == second {
+    @media (max-width: 600px) { @content; }
+  }
+  @else if $point == third {
+    @media (max-width: 550px)  { @content; }
+  }
+  @else if $point == fourth {
+    @media (max-width: 475px)  { @content; }
+  }
+}
 
-
+//GLOBAL STYLES
 *, *+*{
 	box-sizing: border-box;
 	}
@@ -57,6 +72,8 @@ img, svg{
 	    clear: both;
 		}
 	}
+	
+//TYPOGRAPHY
 a:hover{
 	transition: color 100ms ease-in-out;
 	}
