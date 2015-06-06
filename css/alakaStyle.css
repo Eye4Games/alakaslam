@@ -32,8 +32,6 @@ table {
   border-spacing: 0; }
 
 *, * + * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -46,11 +44,11 @@ img, svg {
   height: auto; }
 
 .container {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   margin: 0 auto;
   max-width: 800px;
@@ -62,7 +60,6 @@ img, svg {
   clear: both; }
 
 a:hover {
-  -webkit-transition: color 100ms ease-in-out;
   transition: color 100ms ease-in-out; }
 
 p {
@@ -88,12 +85,14 @@ h1 {
   padding-bottom: 20px; }
 
 .twoFifth {
+  -webkit-box-flex: 2 42.75%;
   -webkit-flex: 2 42.75%;
   -ms-flex: 2 42.75%;
   flex: 2 42.75%;
   overflow: hidden; }
 
 .threeFifth {
+  -webkit-box-flex: 3 57.25%;
   -webkit-flex: 3 57.25%;
   -ms-flex: 3 57.25%;
   flex: 3 57.25%; }
@@ -107,8 +106,6 @@ div[class$="Fifth"]:last-child {
   padding: 15px 20px 10px;
   position: relative; }
   .mainHeader::after {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 50, 41, 0.3)), to(rgba(0, 147, 69, 0.3)));
-    background: -webkit-linear-gradient(top, rgba(16, 50, 41, 0.3), rgba(0, 147, 69, 0.3));
     background: linear-gradient(to bottom, rgba(16, 50, 41, 0.3), rgba(0, 147, 69, 0.3));
     content: "";
     position: absolute;
@@ -119,7 +116,6 @@ div[class$="Fifth"]:last-child {
 
 .mainNav {
   -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   background: #efeecb;
   margin: 0 auto;
@@ -130,6 +126,7 @@ div[class$="Fifth"]:last-child {
   top: 15px;
   z-index: 2; }
   .mainNav .intenalNav {
+    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -140,8 +137,6 @@ div[class$="Fifth"]:last-child {
         color: #009345; }
   .mainNav::before, .mainNav::after {
     border: 10px solid white;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     content: "";
     position: absolute;
@@ -149,10 +144,10 @@ div[class$="Fifth"]:last-child {
     z-index: 1; }
   .mainNav::before {
     left: 0;
-    border-color: #d1ce69 #d1ce69 transparent transparent; }
+    border-color: #d1ce6a #d1ce6a transparent transparent; }
   .mainNav::after {
     right: 0;
-    border-color: #d1ce69 transparent transparent #d1ce69; }
+    border-color: #d1ce6a transparent transparent #d1ce6a; }
   .mainNav a {
     color: #103229;
     font-size: 1.8em;
@@ -167,8 +162,6 @@ section, .teamProfiles, .mainFooter {
   overflow: hidden; }
 
 .introduction {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 50, 41, 0.7)), to(rgba(16, 50, 41, 0.5)));
-  background: -webkit-linear-gradient(top, rgba(16, 50, 41, 0.7), rgba(16, 50, 41, 0.5));
   background: linear-gradient(to bottom, rgba(16, 50, 41, 0.7), rgba(16, 50, 41, 0.5));
   color: white;
   margin-top: -9px;
@@ -177,13 +170,12 @@ section, .teamProfiles, .mainFooter {
 
 .interior .introduction .container {
   display: block; }
+
 .interior .introduction h1 {
   font: 400 normal 5em/1 "Vollkorn", Georgia, Times, serif;
   padding-bottom: 10px; }
 
 .explanation {
-  background: url("../images/tennis-wizard.png") -200px 30px no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(239, 238, 203, 0.9)), to(rgba(239, 238, 203, 0.7)));
-  background: url("../images/tennis-wizard.png") -200px 30px no-repeat, -webkit-linear-gradient(top, rgba(239, 238, 203, 0.9), rgba(239, 238, 203, 0.7));
   background: url("../images/tennis-wizard.png") -200px 30px no-repeat, linear-gradient(to bottom, rgba(239, 238, 203, 0.9), rgba(239, 238, 203, 0.7));
   border-top: 5px solid #f1f1d3;
   padding: 30px 0 0; }
@@ -195,11 +187,8 @@ section, .teamProfiles, .mainFooter {
     padding-bottom: 30px; }
 
 .button {
-  background: -webkit-gradient(linear, left top, left bottom, from(#009345), to(#007939));
-  background: -webkit-linear-gradient(top, #009345, #007939);
   background: linear-gradient(to bottom, #009345, #007939);
   border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 3px #efeecb;
   box-shadow: 0px 2px 3px #efeecb;
   border: none;
   color: #efeecb;
@@ -210,13 +199,9 @@ section, .teamProfiles, .mainFooter {
   text-decoration: none; }
   .button:hover {
     cursor: pointer;
-    background: -webkit-gradient(linear, left top, left bottom, from(#007939), to(#00602d));
-    background: -webkit-linear-gradient(top, #007939, #00602d);
     background: linear-gradient(to bottom, #007939, #00602d); }
   .button:active {
     cursor: pointer;
-    background: -webkit-gradient(linear, left top, left bottom, from(#00602d), to(#004621));
-    background: -webkit-linear-gradient(top, #00602d, #004621);
     background: linear-gradient(to bottom, #00602d, #004621); }
 
 .interior .explanation h2 {
@@ -226,9 +211,8 @@ section, .teamProfiles, .mainFooter {
   text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(239, 238, 203, 0.8);
   padding-bottom: 20px; }
+
 .interior .explanation .character, .interior .explanation .doublesSection {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(156, 156, 117, 0.2)), to(rgba(156, 156, 117, 0.1)));
-  background: -webkit-linear-gradient(top, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
   background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
   padding-top: 30px; }
   .interior .explanation .character h1, .interior .explanation .doublesSection h1 {
@@ -237,20 +221,25 @@ section, .teamProfiles, .mainFooter {
     font-weight: 400;
     letter-spacing: 2px;
     text-align: center; }
+
 .interior .explanation p a {
   color: #009345; }
   .interior .explanation p a:hover {
     border-bottom-color: #009345; }
+
 .interior .explanation ol {
   list-style-type: decimal; }
+
 .interior .explanation ul {
   list-style-type: circle; }
+
 .interior .explanation ul, .interior .explanation ol {
   font: 400 normal 1.6em/1.8em "Vollkorn", Georgia, Times, serif;
   padding-left: 20px;
   padding-bottom: 30px; }
   .interior .explanation ul i, .interior .explanation ol i {
     font-style: italic; }
+
 .interior .explanation ol ul {
   font-size: 1em;
   padding-bottom: 0; }
@@ -261,16 +250,14 @@ section, .teamProfiles, .mainFooter {
 
 #rules .twoFifth h2 {
   color: #9c9c75; }
+
 #rules .twoFifth ul, #rules .twoFifth p {
   color: #5e5e47; }
 
 aside.example {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(239, 238, 203, 0.6)), to(rgba(239, 238, 203, 0.4)));
-  background: -webkit-linear-gradient(top, rgba(239, 238, 203, 0.6), rgba(239, 238, 203, 0.4));
   background: linear-gradient(to bottom, rgba(239, 238, 203, 0.6), rgba(239, 238, 203, 0.4));
   border: 5px ridge rgba(156, 156, 117, 0.2);
   border-radius: 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(94, 94, 71, 0.5);
   box-shadow: 0 2px 3px rgba(94, 94, 71, 0.5);
   padding: 15px;
   position: relative;
@@ -286,7 +273,6 @@ aside.example {
   aside.example p {
     color: #5e5e47; }
   aside.example::after {
-    -webkit-box-shadow: 0 2px 3px rgba(94, 94, 71, 0.5);
     box-shadow: 0 2px 3px rgba(94, 94, 71, 0.5);
     content: "i";
     color: #efeecb;
@@ -301,8 +287,6 @@ aside.example {
     text-align: center; }
 
 .quotation {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(156, 156, 117, 0.2)), to(rgba(156, 156, 117, 0.1)));
-  background: -webkit-linear-gradient(top, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
   background: linear-gradient(to bottom, rgba(156, 156, 117, 0.2), rgba(156, 156, 117, 0.1));
   padding: 30px 20px;
   text-align: center; }
@@ -321,11 +305,8 @@ aside.example {
       padding-bottom: 0; }
 
 .beforeFooter {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 147, 69, 0.5)), to(rgba(0, 147, 69, 0.3)));
-  background: -webkit-linear-gradient(top, rgba(0, 147, 69, 0.5), rgba(0, 147, 69, 0.3));
   background: linear-gradient(to bottom, rgba(0, 147, 69, 0.5), rgba(0, 147, 69, 0.3));
   border-top: 5px solid #00ac51;
-  -webkit-box-shadow: 0 5px 5px #103229;
   box-shadow: 0 5px 5px #103229;
   padding: 30px 20px; }
   .beforeFooter h2 {
@@ -344,31 +325,29 @@ aside.example {
   font-weight: 400;
   letter-spacing: 2px;
   text-align: center; }
+
 .teamProfiles .teamProfile {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   -webkit-align-items: flex-start;
-  -ms-flex-align: start;
   align-items: flex-start;
   margin: 0 auto;
   max-width: 650px;
   padding-bottom: 20px; }
   .teamProfiles .teamProfile img {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 50, 41, 0.2)), to(rgba(16, 50, 41, 0)));
-    background: -webkit-linear-gradient(top, rgba(16, 50, 41, 0.2), rgba(16, 50, 41, 0));
     background: linear-gradient(to bottom, rgba(16, 50, 41, 0.2), rgba(16, 50, 41, 0));
     padding: 8px;
     border-radius: 50%; }
   .teamProfiles .teamProfile .teamProfileText {
+    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     -webkit-align-self: center;
-    -ms-flex-item-align: center;
     align-self: center;
     padding-left: 20px; }
   .teamProfiles .teamProfile h3 {
@@ -380,21 +359,23 @@ aside.example {
     text-transform: uppercase; }
 
 .awardsGranted {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 50, 41, 0.3)), to(rgba(16, 50, 41, 0)));
-  background: -webkit-linear-gradient(top, rgba(16, 50, 41, 0.3), rgba(16, 50, 41, 0));
   background: linear-gradient(to bottom, rgba(16, 50, 41, 0.3), rgba(16, 50, 41, 0));
   margin: 0 -20px -30px;
   padding: 30px 0;
   text-align: center; }
+  .awardsGranted h3 {
+    color: #103229;
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 15px; }
 
 .gmgSeal svg {
   fill: white; }
+
 .gmgSeal:hover svg {
   fill: #8bc53f; }
 
 .mainFooter {
-  background: url("../images/reverse-sigil.png") right center no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(16, 50, 41, 0.8)), to(rgba(16, 50, 41, 0.6)));
-  background: url("../images/reverse-sigil.png") right center no-repeat, -webkit-linear-gradient(top, rgba(16, 50, 41, 0.8), rgba(16, 50, 41, 0.6));
   background: url("../images/reverse-sigil.png") right center no-repeat, linear-gradient(to bottom, rgba(16, 50, 41, 0.8), rgba(16, 50, 41, 0.6));
   padding: 30px 20px 20px;
   text-align: right; }
@@ -403,29 +384,31 @@ aside.example {
   .mainFooter .Eye4Logo {
     margin-top: -35px; }
   .mainFooter .textContainer {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     width: 100%;
     padding-left: 20px; }
   .mainFooter .copyright {
+    -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     color: #efeecb;
-    font: 200 normal 2em/1 "Oswald",Helvetica, Arial, sans-serif;
+    font: 200 normal 2em/1 "Oswald", Helvetica, Arial, sans-serif;
     padding: 30px 0 0;
     text-align: left;
     text-transform: uppercase; }
   .mainFooter .footerNav {
+    -webkit-box-flex: 2;
     -webkit-flex: 2;
-    -ms-flex: 2;
     flex: 2;
     padding-top: 30px; }
     .mainFooter .footerNav a {
@@ -441,12 +424,13 @@ aside.example {
 @media screen and (max-width: 850px) {
   .introduction .container {
     padding: 0 40px; } }
+
 @media screen and (max-width: 768px) {
   .mainFooter .textContainer {
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .mainFooter .copyright, .mainFooter .footerNav {
+    -webkit-box-flex: 1 100%;
     -webkit-flex: 1 100%;
     -ms-flex: 1 100%;
     flex: 1 100%; }
@@ -454,13 +438,13 @@ aside.example {
     text-align: right; }
   .mainFooter .footerNav {
     padding-top: 10px; } }
+
 @media screen and (max-width: 600px) {
   .container {
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-
   div[class$="Fifth"] {
+    -webkit-box-flex: 1 100%;
     -webkit-flex: 1 100%;
     -ms-flex: 1 100%;
     flex: 1 100%; }
@@ -468,32 +452,31 @@ aside.example {
       padding-bottom: 20px; }
     div[class$="Fifth"]:last-child {
       padding: 0; }
-
   .explanation .button {
     display: block;
     text-align: center; } }
+
 @media screen and (max-width: 550px) {
   .mainNav {
     text-align: center; }
     .mainNav a {
       font-size: 5vw; }
-
   footer.mainFooter .copyright, footer.mainFooter .footerNav, footer.mainFooter .footerNav a {
     display: block;
     padding: 0;
     padding-bottom: 10px; }
   footer.mainFooter .footerNav a:last-child {
     padding: 0; }
-
   .interior .introduction h1 {
     font-size: 8.5vw; } }
+
 @media screen and (max-width: 475px) {
   .teamProfiles .teamProfile {
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     text-align: center; }
     .teamProfiles .teamProfile .teamProfileText {
+      -webkit-box-flex: 1 100%;
       -webkit-flex: 1 100%;
       -ms-flex: 1 100%;
       flex: 1 100%; }
@@ -501,4 +484,3 @@ aside.example {
       margin: 0 auto; }
     .teamProfiles .teamProfile .teamProfileText {
       padding-left: 0; } }
-
