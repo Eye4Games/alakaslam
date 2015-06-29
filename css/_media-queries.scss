@@ -49,16 +49,15 @@
 	}
 
 @media screen and (max-width:475px){
-	.offerNav{@include flex(1 20%);}
+	.offerNav{display: block;}
 	.mainNav{
-		.intenalNav{@include flex(1 80%);}
-		.tryButton{
-			margin-right: 0;
-			margin-bottom: 5px;
+		.intenalNav{
+			@include flex(1 80%);
+			margin-bottom: 10px;
 			}
 		.buyButton, .tryButton{
 			display: block;
-			padding: 3px 8px;
+			padding: 5px 8px;
 			}	
 		}
 	.teamProfiles .teamProfile{

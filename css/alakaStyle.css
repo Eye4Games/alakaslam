@@ -493,21 +493,16 @@ aside.example {
 
 @media screen and (max-width: 475px) {
   .offerNav {
-    -webkit-box-flex: 1 20%;
-    -webkit-flex: 1 20%;
-    -ms-flex: 1 20%;
-    flex: 1 20%; }
+    display: block; }
   .mainNav .intenalNav {
     -webkit-box-flex: 1 80%;
     -webkit-flex: 1 80%;
     -ms-flex: 1 80%;
-    flex: 1 80%; }
-  .mainNav .tryButton {
-    margin-right: 0;
-    margin-bottom: 5px; }
+    flex: 1 80%;
+    margin-bottom: 10px; }
   .mainNav .buyButton, .mainNav .tryButton {
     display: block;
-    padding: 3px 8px; }
+    padding: 5px 8px; }
   .teamProfiles .teamProfile {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
