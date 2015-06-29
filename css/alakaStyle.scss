@@ -60,8 +60,14 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		}
-	.buyButton{
+	.buyButton, .tryButton{
 		color: $lightBrown;
+		}
+	.tryButton{
+		background: linear-gradient(to bottom, $midBrown, $darkBrown);
+		margin-right: 10px;
+		&:hover{background: linear-gradient(to bottom, darken($midBrown,5%), darken($midBrown,10%));}
+		&:active{background: linear-gradient(to bottom, darken($midBrown,10%), darken($midBrown,15%));}
 		}
 	}
 	
@@ -99,7 +105,6 @@ section, .teamProfiles, .mainFooter{
 		padding-bottom: 30px;
 		}
 	}
-
 .button{
 	background: linear-gradient(to bottom, $mainGreen, darken($mainGreen,5%));
 	border-radius: 5px;
@@ -119,6 +124,12 @@ section, .teamProfiles, .mainFooter{
 		cursor: pointer;
 		background: linear-gradient(to bottom, darken($mainGreen,10%), darken($mainGreen,15%));
 		}
+	}
+.tryIt{
+	background: linear-gradient(to bottom, $midBrown,  darken($midBrown,5%));
+	&:hover, &:active{cursor: pointer;}
+	&:hover{background: linear-gradient(to bottom, darken($midBrown,5%), darken($midBrown,10%));}
+	&:active{background: linear-gradient(to bottom, darken($midBrown,10%), darken($midBrown,15%));}
 	}
 
 .interior .explanation{
