@@ -49,8 +49,11 @@
 	}
 
 @media screen and (max-width:475px){
+	.offerNav{
+		margin: 0 auto;
+		}
 	.mainNav{
-		.intenalNav{
+		.internalNav{
 			@include flex(1 80%);
 			margin-bottom: 10px;
 			text-align: center;
