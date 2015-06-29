@@ -489,16 +489,16 @@ aside.example {
     font-size: 8.5vw; } }
 
 @media screen and (max-width: 475px) {
-  .internalNav {
-    -webkit-box-flex: 1 80%;
-    -webkit-flex: 1 80%;
-    -ms-flex: 1 80%;
-    flex: 1 80%; }
   .offerNav {
     -webkit-box-flex: 1 20%;
     -webkit-flex: 1 20%;
     -ms-flex: 1 20%;
     flex: 1 20%; }
+  .mainNav .internalNav {
+    -webkit-box-flex: 1 80%;
+    -webkit-flex: 1 80%;
+    -ms-flex: 1 80%;
+    flex: 1 80%; }
   .mainNav .tryButton {
     margin-right: 0;
     margin-bottom: 5px; }
