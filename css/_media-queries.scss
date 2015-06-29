@@ -49,6 +49,16 @@
 	}
 
 @media screen and (max-width:475px){
+	.internalNav{@include flex(1 80%);}
+	.offerNav{@include flex(1 20%);}
+	.tryButton{
+		margin-right: 0;
+		margin-bottom: 5px;
+		}
+	.buyButton, .tryButton{
+		display: block;
+		padding: 3px 8px;
+		}
 	.teamProfiles .teamProfile{
 		@include flexWrap(wrap);
 		text-align: center;
