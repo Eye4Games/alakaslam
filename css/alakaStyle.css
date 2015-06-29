@@ -138,6 +138,8 @@ div[class$="Fifth"]:last-child {
       margin-right: 20px; }
       .mainNav .intenalNav a.navHere, .mainNav .intenalNav a:hover {
         color: #009345; }
+      .mainNav .intenalNav a:last-child {
+        margin-right: 0; }
   .mainNav::before, .mainNav::after {
     border: 10px solid white;
     box-sizing: content-box;
@@ -492,14 +494,13 @@ aside.example {
     font-size: 8.5vw; } }
 
 @media screen and (max-width: 475px) {
-  .offerNav {
-    display: block; }
   .mainNav .intenalNav {
     -webkit-box-flex: 1 80%;
     -webkit-flex: 1 80%;
     -ms-flex: 1 80%;
     flex: 1 80%;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: center; }
   .mainNav .buyButton, .mainNav .tryButton {
     display: block;
     padding: 5px 8px; }

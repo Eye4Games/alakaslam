@@ -38,6 +38,7 @@
 		a{
 			margin-right: 20px;
 			&.navHere, &:hover{color: $mainGreen;}
+			&:last-child{margin-right: 0;}
 			}
 		}
 	&::before, &::after{

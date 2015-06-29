@@ -49,11 +49,11 @@
 	}
 
 @media screen and (max-width:475px){
-	.offerNav{display: block;}
 	.mainNav{
 		.intenalNav{
 			@include flex(1 80%);
 			margin-bottom: 10px;
+			text-align: center;
 			}
 		.buyButton, .tryButton{
 			display: block;
