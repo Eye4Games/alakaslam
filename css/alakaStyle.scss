@@ -28,6 +28,10 @@
 	text-align: right;
 	top:15px;
 	z-index: 2;
+	.offerNav{
+		display: -webkit-inline-flex;
+		display: inline-flex;
+		}
 	.intenalNav{
 		@include flex(1);
 		text-align: left;

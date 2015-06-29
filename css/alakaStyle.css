@@ -125,6 +125,9 @@ div[class$="Fifth"]:last-child {
   text-align: right;
   top: 15px;
   z-index: 2; }
+  .mainNav .offerNav {
+    display: -webkit-inline-flex;
+    display: inline-flex; }
   .mainNav .intenalNav {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
