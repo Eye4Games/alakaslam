@@ -499,10 +499,10 @@ aside.example {
     -webkit-flex: 1 20%;
     -ms-flex: 1 20%;
     flex: 1 20%; }
-  .tryButton {
+  .mainNav .tryButton {
     margin-right: 0;
     margin-bottom: 5px; }
-  .buyButton, .tryButton {
+  .mainNav .buyButton, .mainNav .tryButton {
     display: block;
     padding: 3px 8px; }
   .teamProfiles .teamProfile {
