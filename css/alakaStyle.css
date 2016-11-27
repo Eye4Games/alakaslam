@@ -40,8 +40,7 @@ body {
   font-family: "Vollkorn", Georgia, Times, serif; }
 
 img, svg {
-  max-width: 100%;
-  height: auto; }
+  max-width: 100%; }
 
 .container {
   display: -webkit-box;
